@@ -1,0 +1,63 @@
+nav {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  margin:0 auto;
+  margin-top: 10px;
+  list-style:none;
+}
+
+nav li {
+  float:left;
+}
+
+nav a {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+#nav, h1 {
+  display: inline-block;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: lighter;
+  letter-spacing: -4px;
+
+}
+
+.contactbtn {
+  border: 1px solid rgba(119, 119, 119, 0.46);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.contactbtn:hover {
+  border: 1px solid rgba(69, 69, 69, 0.46);
+  background: #fbfbfb;
+  transition: 0.5s;
+}
+
+.blinker {
+  display: inline-block;
+  font-size: 42px;
+}
+
+.blink {
+  animation: blinker 0.8s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.kpr-input {
+  text-align: center;
+  width: 240px;
+  height: 42px;
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(128, 128, 128, 0.03);
+}
