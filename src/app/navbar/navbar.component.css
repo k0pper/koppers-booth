@@ -14,17 +14,24 @@ nav li {
 nav a {
   padding-left: 35px;
   padding-right: 35px;
+  text-transform: lowercase;
+}
+
+h1.hey {
+  margin-right: -30px;
+  position: absolute;
+  left: 35%;
+  top: 40px;
 }
 
 #nav, h1 {
   display: inline-block;
 }
 
-h1 {
-  font-size: 72px;
-  font-weight: lighter;
-  letter-spacing: -4px;
-
+h1.nav-brand  p.k, h1.nav-brand  p.o, h1.nav-brand  p.p, h1.nav-brand  p.p2, h1.nav-brand  p.e, h1.nav-brand  p.r {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 .contactbtn {
@@ -41,7 +48,7 @@ h1 {
 
 .blinker {
   display: inline-block;
-  font-size: 42px;
+  font-size: 60px;
 }
 
 .blink {
@@ -52,6 +59,8 @@ h1 {
   50% { opacity: 0; }
 }
 
+
+
 .kpr-input {
   text-align: center;
   width: 240px;
@@ -60,4 +69,22 @@ h1 {
   border-radius: 10px;
   border: none;
   background: rgba(128, 128, 128, 0.03);
+}
+
+ul a:before {
+  content: "< ";
+}
+
+ul a:after {
+  content: " />";
+}
+
+ul a:before, ul a:after {
+  opacity: 0.5;
+  color: black;
+  font-size: 16px;
+}
+
+ul a:hover {
+
 }
