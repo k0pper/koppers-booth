@@ -18,10 +18,9 @@ nav a {
 }
 
 h1.hey {
-  margin-right: -30px;
   position: absolute;
-  left: 35%;
-  top: 40px;
+  left: 45%;
+  top: 10px;
 }
 
 #nav, h1 {

@@ -22,7 +22,7 @@
         "styles.css"
       ],
       "scripts": [
-        "../src/app/navbar/kopper.js"
+        "../src/assets/js/kopper.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

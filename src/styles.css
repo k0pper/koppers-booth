@@ -3,6 +3,10 @@
   background: rgba(0, 229, 22, 0.51); /* WebKit/Blink Browsers */
 }
 
+html, body {
+  min-height: 100%;
+}
+
 body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -13,19 +17,20 @@ body {
 }
 
 h1 {
-  font-family: "Oswald", "Impact", sans-serif;
+  font-family: "Oswald", "Gill Sans", sans-serif;
   padding-right: 10px;
   font-size: 32px;
+  text-transform: lowercase;
 }
 
 h2 {
-  font-family: "Oswald", "Impact", sans-serif;
+  font-family: "Oswald", "Gill Sans", sans-serif;
   padding-right: 10px;
   font-size: 32px;
 }
 
 h3 {
-  font-family: "Oswald", "Impact", sans-serif;
+  font-family: "Oswald", "Gill Sans", sans-serif;
   padding-right: 10px;
   font-size: 24px;
 }
@@ -78,30 +83,38 @@ p {
   font-size: 14px;
 }
 
-div.infobox h3 {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 45px;
-  padding-top: 25px;
+.turnaround-container {
+  height: 350px;
   width: 100%;
-  color: #ffffff;
-  position: relative;
-  top: 18%;
-  font-size: 46px;
-  background: rgba(0, 0, 0, 0.85);
-  vertical-align: middle;
+  perspective: 1000px; /* Hier wird die Perspektive der gesamten Szene festgelegt. Der Wert hat Auswirkung auf die Verzerrung */
+  float: left;
+  cursor: pointer;
+  margin: 50px;
 }
 
-div.infobox {
+.turnaround {
+  transition: .5s /* Die Drehung soll 0,5 Sekunden dauern */;
+  transform-style: preserve-3d; /* Kind-Elemente  (.front + .back) sollen ihre 3D-Eigenschaften behalten*/
+  position: relative;
+  height: 100%;
+}
+
+.turnaround-container:hover .turnaround {
+  transform: rotateY(180deg);
+  box-shadow: 0 10px 6px -6px #777;
+}
+
+.front, .back {
+  backface-visibility: hidden /* Die Rückseite von Elementen soll unsichtbar sein */;
+  position: absolute;
   width: 100%;
-  height: 200px;
-  background: rgba(0, 0, 0, 0.61);
-  border-radius: 10px;
-  color: white;
-  padding: 10px;
-  padding-right: 0;
-  padding-left: 0;
-  text-align: center;
-  margin: 15px;
-  box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.82);
+  height: 100%;
+}
+
+.front { z-index: 2; background-color: #ffffff;}
+
+.back {
+  transform: rotateY(180deg) /* Die Rückseite des Logos wird umgedreht, um dann bei der Drehung der gesamten Szene vorne zu sein :) */;
+  z-index: 1;
+  background-color: #e0e0e0;
 }

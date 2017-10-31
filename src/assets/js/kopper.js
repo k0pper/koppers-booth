@@ -1,8 +1,8 @@
-'use strict';
 $(document).ready(function () {
 
   var el = $('#brand');
   var kopper = 'kopper';
+
 
   var i = 0;
   (function myLoop () {
